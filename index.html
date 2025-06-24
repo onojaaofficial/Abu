@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Onoja - Senior Salesforce Administrator</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles & Configuration -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        /* A subtle background grid pattern */
+        .main-background {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+        /* Custom gradient for text */
+        .text-gradient {
+            background: linear-gradient(90deg, #4f46e5, #c026d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Blinking cursor for the typing effect */
+        .typing-cursor {
+            border-right: .15em solid #6366f1;
+            animation: blink-caret .75s step-end infinite;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #6366f1; }
+        }
+    </style>
+</head>
+<body class="main-background">
+
+    <!-- Header / Navigation -->
+    <header class="bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gradient">Alex Doe</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#skills" class="text-slate-300 hover:text-white transition duration-300">Skills</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-white transition duration-300">Portfolio</a>
+                <a href="#about" class="text-slate-300 hover:text-white transition duration-300">About</a>
+                <a href="#contact" class="px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg shadow-indigo-600/30">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-white transition duration-300">Skills</a>
+            <a href="#portfolio" class="block py-2 text-slate-300 hover:text-white transition duration-300">Portfolio</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-white transition duration-300">About</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-white transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 md:py-24">
+
+        <!-- Hero Section -->
+        <section class="text-center min-h-[60vh] flex flex-col items-center justify-center">
+            <div class="w-24 h-24 mb-6 rounded-full bg-slate-800 border-2 border-indigo-500 shadow-lg">
+                <img src="https://placehold.co/96x96/1e293b/4f46e5?text=AD" alt="Alex Doe" class="w-full h-full rounded-full object-cover">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
+                Senior Salesforce Administrator
+            </h1>
+            <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-slate-400">
+                I build, automate, and optimize Salesforce ecosystems to drive business growth and user efficiency.
+                Specializing in <span id="typing-effect" class="font-semibold text-gradient"></span><span class="typing-cursor"></span>
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#portfolio" class="px-8 py-3.5 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-xl shadow-indigo-600/30 transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-8 py-3.5 bg-slate-800 text-slate-300 font-bold rounded-lg hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Core Competencies</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Automation</h3>
+                    <p class="text-slate-400">Expert in Flow, Process Builder, and Apex Triggers to streamline complex business processes.</p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Data & Analytics</h3>
+                    <p class="text-slate-400">Skilled in data modeling, migration, and creating insightful reports & dashboards (Tableau CRM).</p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Integration</h3>
+                    <p class="text-slate-400">Experienced in connecting Salesforce with external systems using APIs and middleware like MuleSoft.</p>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Change Management</h3>
+                    <p class="text-slate-400">Focused on driving user adoption through effective training, documentation, and communication.</p>
+                </div>
+                <!-- Skill Card 5 -->
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Security & Compliance</h3>
+                    <p class="text-slate-400">Implementing robust security models, profiles, and permissions to protect sensitive data.</p>
+                </div>
+                 <!-- Skill Card 6 -->
+                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Testing & Deployment</h3>
+                    <p class="text-slate-400">Proficient with sandboxes, change sets, and CI/CD pipelines for seamless deployments.</p>
+                </div>
+                 <!-- Skill Card 7 -->
+                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Troubleshooting</h3>
+                    <p class="text-slate-400">Expert debugger and problem-solver, quickly identifying and resolving complex system issues.</p>
+                </div>
+                 <!-- Skill Card 8 -->
+                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-white mb-2">User Experience</h3>
+                    <p class="text-slate-400">Passionate about creating intuitive user interfaces with Dynamic Forms and Lightning App Builder.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Project Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 bg-green-500/20 text-green-400 rounded-full">Completed</span>
+                        <h3 class="text-2xl font-bold text-white mt-4">Automated Lead-to-Cash Process</h3>
+                        <p class="text-slate-400 mt-2">Designed and implemented a fully automated system from lead creation to final payment, reducing manual entry by 95% and accelerating sales cycle by 30%.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="tech-tag">Sales Cloud</span><span class="tech-tag">Flow</span><span class="tech-tag">CPQ</span><span class="tech-tag">APEX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full">In Progress</span>
+                        <h3 class="text-2xl font-bold text-white mt-4">Global Sales Analytics Dashboard</h3>
+                        <p class="text-slate-400 mt-2">Building a comprehensive Tableau CRM dashboard to provide C-level executives with real-time insights into global sales performance and forecasting.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="tech-tag">Tableau CRM</span><span class="tech-tag">Data Integration</span><span class="tech-tag">SAQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full">Coming Soon</span>
+                        <h3 class="text-2xl font-bold text-white mt-4">Service Cloud & ERP Integration</h3>
+                        <p class="text-slate-400 mt-2">Planning a major integration between Service Cloud and a legacy ERP system to give support agents a 360-degree view of the customer.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="tech-tag">Service Cloud</span><span class="tech-tag">MuleSoft</span><span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card 4 (Placeholder) -->
+                <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full">Coming Soon</span>
+                        <h3 class="text-2xl font-bold text-white mt-4">Org Security Overhaul</h3>
+                        <p class="text-slate-400 mt-2">A full audit and refactoring of the user security model for a 5000-user org, implementing Salesforce Shield for enhanced compliance.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="tech-tag">Security Center</span><span class="tech-tag">Shield</span><span class="tech-tag">Permissions</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
+                 <p class="text-lg text-slate-400 leading-relaxed">
+                    With over a decade of experience as a Salesforce professional, I'm passionate about more than just administration; I'm a strategic partner dedicated to transforming business operations. My approach combines deep technical expertise with a focus on user-centric design and scalable architecture. I thrive on untangling complex challenges and delivering elegant, automated solutions that empower users and drive measurable results. I believe the best Salesforce orgs are the ones that feel intuitive, reliable, and indispensable to the teams that use them every day.
+                 </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-900/50 rounded-2xl border border-slate-800">
+             <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Build Something Great</h2>
+                <p class="mt-4 text-slate-400">Have a project in mind or just want to connect? Feel free to reach out.</p>
+                <a href="mailto:alex.doe@example.com" class="mt-8 inline-block px-10 py-4 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-xl shadow-indigo-600/30 transform hover:scale-105">
+                    alex.doe@example.com
+                </a>
+                <div class="mt-10 flex justify-center space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Trailhead</a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 mt-16 border-t border-slate-800">
+        <p class="text-slate-500">&copy; 2024 Alex Doe. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript for interactivity -->
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Typing Effect ---
+        const typingElement = document.getElementById('typing-effect');
+        const words = [
+            "complex automations.",
+            "data analytics.",
+            "secure integrations.",
+            "user adoption."
+        ];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+
+        function type() {
+            currentWord = words[i];
+            if (isDeleting) {
+                // Deleting text
+                typingElement.textContent = currentWord.substring(0, j - 1);
+                j--;
+                if (j === 0) {
+                    isDeleting = false;
+                    i++;
+                    if (i === words.length) {
+                        i = 0;
+                    }
+                }
+            } else {
+                // Typing text
+                typingElement.textContent = currentWord.substring(0, j + 1);
+                j++;
+                if (j === currentWord.length) {
+                    isDeleting = true;
+                    // Pause at end of word
+                    setTimeout(type, 2000);
+                    return;
+                }
+            }
+            // Adjust typing speed
+            const typingSpeed = isDeleting ? 50 : 150;
+            setTimeout(type, typingSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Start the typing effect once the DOM is loaded
+            setTimeout(type, 1500);
+
+            // Add custom styles for tech tags in the portfolio
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .tech-tag {
+                    display: inline-block;
+                    padding: 0.25rem 0.75rem;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    border-radius: 9999px;
+                    background-color: rgba(79, 70, 229, 0.2);
+                    color: #a5b4fc;
+                    border: 1px solid rgba(99, 102, 241, 0.4);
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
