@@ -1,19 +1,19 @@
-noja<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The portfolio of James Onoja, a Senior Salesforce Administrator specializing in automation, analytics, and integration.">
     <title>James Onoja - Senior Salesforce Administrator</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles & Configuration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -40,12 +40,22 @@ noja<!DOCTYPE html>
             from, to { border-color: transparent }
             50% { border-color: #6366f1; }
         }
+        /* Style for portfolio tech tags */
+        .tech-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            background-color: rgba(79, 70, 229, 0.2);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.4);
+        }
     </style>
 </head>
 <body class="main-background">
 
-    <!-- Header / Navigation -->
-    <header class="bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+    <header class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800/50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-gradient">James Onoja</a>
             <div class="hidden md:flex space-x-6 items-center">
@@ -54,27 +64,28 @@ noja<!DOCTYPE html>
                 <a href="#about" class="text-slate-300 hover:text-white transition duration-300">About</a>
                 <a href="#contact" class="px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg shadow-indigo-600/30">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-label="Open main menu">
+                <svg id="menu-open-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="menu-close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
-            <a href="#skills" class="block py-2 text-slate-300 hover:text-white transition duration-300">Skills</a>
-            <a href="#portfolio" class="block py-2 text-slate-300 hover:text-white transition duration-300">Portfolio</a>
-            <a href="#about" class="block py-2 text-slate-300 hover:text-white transition duration-300">About</a>
-            <a href="#contact" class="block py-2 text-slate-300 hover:text-white transition duration-300">Contact</a>
+            <a href="#skills" class="mobile-menu-link block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition duration-300">Skills</a>
+            <a href="#portfolio" class="mobile-menu-link block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition duration-300">Portfolio</a>
+            <a href="#about" class="mobile-menu-link block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition duration-300">About</a>
+            <a href="#contact" class="mobile-menu-link block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition duration-300">Contact</a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-16 md:py-24">
 
-        <!-- Hero Section -->
         <section class="text-center min-h-[60vh] flex flex-col items-center justify-center">
             <div class="w-24 h-24 mb-6 rounded-full bg-slate-800 border-2 border-indigo-500 shadow-lg">
-                <img src="https://placehold.co/96x96/1e293b/4f46e5?text=AD" alt="James Onoja" class="w-full h-full rounded-full object-cover">
+                <img src="https://ik.imagekit.io/tk3pb8d1lq/Headshot.jpg?updatedAt=1750784126580" alt="A profile picture of James Onoja" class="w-full h-full rounded-full object-cover">
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
                 Senior Salesforce Administrator
@@ -83,7 +94,7 @@ noja<!DOCTYPE html>
                 I build, automate, and optimize Salesforce ecosystems to drive business growth and user efficiency.
                 Specializing in <span id="typing-effect" class="font-semibold text-gradient"></span><span class="typing-cursor"></span>
             </p>
-            <div class="mt-8 flex justify-center gap-4">
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
                 <a href="#portfolio" class="px-8 py-3.5 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-xl shadow-indigo-600/30 transform hover:scale-105">
                     View My Work
                 </a>
@@ -93,59 +104,48 @@ noja<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-20">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Core Competencies</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Skill Card 1 -->
                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Automation</h3>
                     <p class="text-slate-400">Expert in Flow, Process Builder, and Apex Triggers to streamline complex business processes.</p>
                 </div>
-                <!-- Skill Card 2 -->
                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Data & Analytics</h3>
                     <p class="text-slate-400">Skilled in data modeling, migration, and creating insightful reports & dashboards (Tableau CRM).</p>
                 </div>
-                <!-- Skill Card 3 -->
                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Integration</h3>
                     <p class="text-slate-400">Experienced in connecting Salesforce with external systems using APIs and middleware like MuleSoft.</p>
                 </div>
-                <!-- Skill Card 4 -->
                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Change Management</h3>
                     <p class="text-slate-400">Focused on driving user adoption through effective training, documentation, and communication.</p>
                 </div>
-                <!-- Skill Card 5 -->
                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Security & Compliance</h3>
                     <p class="text-slate-400">Implementing robust security models, profiles, and permissions to protect sensitive data.</p>
                 </div>
-                 <!-- Skill Card 6 -->
-                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Testing & Deployment</h3>
                     <p class="text-slate-400">Proficient with sandboxes, change sets, and CI/CD pipelines for seamless deployments.</p>
                 </div>
-                 <!-- Skill Card 7 -->
-                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">Troubleshooting</h3>
                     <p class="text-slate-400">Expert debugger and problem-solver, quickly identifying and resolving complex system issues.</p>
                 </div>
-                 <!-- Skill Card 8 -->
-                 <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-800 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-bold text-white mb-2">User Experience</h3>
                     <p class="text-slate-400">Passionate about creating intuitive user interfaces with Dynamic Forms and Lightning App Builder.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
         <section id="portfolio" class="py-20">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Project Portfolio</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project Card 1 -->
                 <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
                     <div class="p-6">
                         <span class="text-xs font-semibold px-3 py-1 bg-green-500/20 text-green-400 rounded-full">Completed</span>
@@ -157,7 +157,6 @@ noja<!DOCTYPE html>
                     </div>
                 </div>
 
-                <!-- Project Card 2 -->
                 <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
                     <div class="p-6">
                         <span class="text-xs font-semibold px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full">In Progress</span>
@@ -169,33 +168,19 @@ noja<!DOCTYPE html>
                     </div>
                 </div>
 
-                <!-- Project Card 3 -->
                 <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
                     <div class="p-6">
-                        <span class="text-xs font-semibold px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full">Coming Soon</span>
+                        <span class="text-xs font-semibold px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full">Completed</span>
                         <h3 class="text-2xl font-bold text-white mt-4">Service Cloud & ERP Integration</h3>
-                        <p class="text-slate-400 mt-2">Planning a major integration between Service Cloud and a legacy ERP system to give support agents a 360-degree view of the customer.</p>
+                        <p class="text-slate-400 mt-2">Led a major integration between Service Cloud and a legacy ERP, giving support agents a 360-degree view of customer order history and support tickets.</p>
                         <div class="mt-4 flex flex-wrap gap-2">
                             <span class="tech-tag">Service Cloud</span><span class="tech-tag">MuleSoft</span><span class="tech-tag">REST API</span>
                         </div>
                     </div>
                 </div>
-                 <!-- Project Card 4 (Placeholder) -->
-                <div class="bg-slate-900/50 backdrop-blur-md rounded-xl overflow-hidden border border-slate-800 group">
-                    <div class="p-6">
-                        <span class="text-xs font-semibold px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full">Coming Soon</span>
-                        <h3 class="text-2xl font-bold text-white mt-4">Org Security Overhaul</h3>
-                        <p class="text-slate-400 mt-2">A full audit and refactoring of the user security model for a 5000-user org, implementing Salesforce Shield for enhanced compliance.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="tech-tag">Security Center</span><span class="tech-tag">Shield</span><span class="tech-tag">Permissions</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
         
-        <!-- About Me Section -->
         <section id="about" class="py-20">
             <div class="max-w-4xl mx-auto text-center">
                  <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
@@ -205,7 +190,6 @@ noja<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-slate-900/50 rounded-2xl border border-slate-800">
              <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Build Something Great</h2>
@@ -214,90 +198,99 @@ noja<!DOCTYPE html>
                     James.onoja@skenky.com
                 </a>
                 <div class="mt-10 flex justify-center space-x-6">
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors">Trailhead</a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/james-onoja-96bb1315a/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn Profile">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://trailblazer.me/profiles" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="Trailhead Profile">
+                         <i data-feather="cloud-lightning" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub Profile">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="text-center py-8 mt-16 border-t border-slate-800">
         <p class="text-slate-500">&copy; 2024 James Onoja. All rights reserved.</p>
     </footer>
 
-    <!-- Custom JavaScript for interactivity -->
     <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-open-icon');
+            const closeIcon = document.getElementById('menu-close-icon');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-        // --- Typing Effect ---
-        const typingElement = document.getElementById('typing-effect');
-        const words = [
-            "complex automations.",
-            "data analytics.",
-            "secure integrations.",
-            "user adoption."
-        ];
-        let i = 0;
-        let j = 0;
-        let currentWord = "";
-        let isDeleting = false;
+            function toggleMenu() {
+                mobileMenu.classList.toggle('hidden');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            }
 
-        function type() {
-            currentWord = words[i];
-            if (isDeleting) {
-                // Deleting text
-                typingElement.textContent = currentWord.substring(0, j - 1);
-                j--;
-                if (j === 0) {
-                    isDeleting = false;
-                    i++;
-                    if (i === words.length) {
-                        i = 0;
+            mobileMenuButton.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // --- Typing Effect ---
+            const typingElement = document.getElementById('typing-effect');
+            const words = [
+                "complex automations.",
+                "data analytics.",
+                "secure integrations.",
+                "user adoption."
+            ];
+            let i = 0; // current word index
+            let j = 0; // current character index
+            let currentWord = "";
+            let isDeleting = false;
+
+            function type() {
+                currentWord = words[i];
+                let typeSpeed = 150;
+
+                if (isDeleting) {
+                    // Deleting text
+                    typingElement.textContent = currentWord.substring(0, j - 1);
+                    j--;
+                    typeSpeed = 50;
+                    if (j === 0) {
+                        isDeleting = false;
+                        i++;
+                        if (i === words.length) {
+                            i = 0;
+                        }
+                    }
+                } else {
+                    // Typing text
+                    typingElement.textContent = currentWord.substring(0, j + 1);
+                    j++;
+                    if (j === currentWord.length) {
+                        isDeleting = true;
+                        // Pause at end of word before deleting
+                        typeSpeed = 2000; 
                     }
                 }
-            } else {
-                // Typing text
-                typingElement.textContent = currentWord.substring(0, j + 1);
-                j++;
-                if (j === currentWord.length) {
-                    isDeleting = true;
-                    // Pause at end of word
-                    setTimeout(type, 2000);
-                    return;
-                }
+                setTimeout(type, typeSpeed);
             }
-            // Adjust typing speed
-            const typingSpeed = isDeleting ? 50 : 150;
-            setTimeout(type, typingSpeed);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Start the typing effect once the DOM is loaded
+            // Start the typing effect after a short delay
             setTimeout(type, 1500);
-
-            // Add custom styles for tech tags in the portfolio
-            const style = document.createElement('style');
-            style.innerHTML = `
-                .tech-tag {
-                    display: inline-block;
-                    padding: 0.25rem 0.75rem;
-                    font-size: 0.75rem;
-                    font-weight: 500;
-                    border-radius: 9999px;
-                    background-color: rgba(79, 70, 229, 0.2);
-                    color: #a5b4fc;
-                    border: 1px solid rgba(99, 102, 241, 0.4);
-                }
-            `;
-            document.head.appendChild(style);
+            
+            // --- Feather Icons Initialization ---
+            // This function finds all elements with data-feather attributes and replaces them with SVG icons.
+            feather.replace();
         });
     </script>
 </body>
