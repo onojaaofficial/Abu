@@ -1,6 +1,482 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="James Onoja – Senior Salesforce Administrator. Specializing in automation, analytics, integration, and user adoption." />
+    <title>James Onoja · Salesforce Administrator</title>
+
+    <!-- Tailwind + Google Fonts + Feather Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .main-background {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 2.5rem 2.5rem;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .typing-cursor {
+            border-right: .15em solid #818cf8;
+            animation: blink-caret .75s step-end infinite;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #818cf8; }
+        }
+        .tech-tag {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            background-color: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            letter-spacing: 0.3px;
+        }
+        .card-glow {
+            transition: all 0.25s ease;
+        }
+        .card-glow:hover {
+            border-color: #818cf8;
+            box-shadow: 0 0 30px -8px rgba(99, 102, 241, 0.25);
+            transform: translateY(-4px);
+        }
+        .section-anchor {
+            scroll-margin-top: 80px;
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #818cf8;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 6px;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+        }
+        .timeline-line {
+            border-left: 2px solid rgba(99, 102, 241, 0.25);
+            margin-left: 5px;
+            padding-left: 1.5rem;
+        }
+        @media (max-width: 640px) {
+            .timeline-line {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body class="main-background">
+
+    <!-- ===== HEADER ===== -->
+    <header class="bg-black/60 backdrop-blur-xl sticky top-0 z-50 border-b border-slate-800/60">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-gradient tracking-tight">James Onoja</a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#experience" class="text-slate-300 hover:text-white transition text-sm font-medium">Experience</a>
+                <a href="#skills" class="text-slate-300 hover:text-white transition text-sm font-medium">Skills</a>
+                <a href="#projects" class="text-slate-300 hover:text-white transition text-sm font-medium">Projects</a>
+                <a href="#education" class="text-slate-300 hover:text-white transition text-sm font-medium">Education</a>
+                <a href="#contact" class="px-5 py-2.5 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/30 text-sm">Contact</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white focus:ring-2 focus:ring-indigo-500" aria-label="Menu">
+                <svg id="menu-open-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                <svg id="menu-close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-1 bg-black/80 backdrop-blur-lg border-b border-slate-800/50">
+            <a href="#experience" class="mobile-link block py-2.5 px-4 rounded-lg text-slate-300 hover:bg-slate-800/60 hover:text-white transition">Experience</a>
+            <a href="#skills" class="mobile-link block py-2.5 px-4 rounded-lg text-slate-300 hover:bg-slate-800/60 hover:text-white transition">Skills</a>
+            <a href="#projects" class="mobile-link block py-2.5 px-4 rounded-lg text-slate-300 hover:bg-slate-800/60 hover:text-white transition">Projects</a>
+            <a href="#education" class="mobile-link block py-2.5 px-4 rounded-lg text-slate-300 hover:bg-slate-800/60 hover:text-white transition">Education</a>
+            <a href="#contact" class="mobile-link block py-2.5 px-4 rounded-lg text-slate-300 hover:bg-slate-800/60 hover:text-white transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="container mx-auto px-6 py-16 md:py-24">
+
+        <!-- ===== HERO ===== -->
+        <section class="text-center min-h-[60vh] flex flex-col items-center justify-center">
+            <div class="w-28 h-28 mb-6 rounded-full bg-slate-800/80 border-2 border-indigo-500 shadow-2xl shadow-indigo-500/20 overflow-hidden">
+                <img src="https://ik.imagekit.io/tk3pb8d1lq/Headshot.jpg?updatedAt=1750784126580" alt="James Onoja profile" class="w-full h-full object-cover" />
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Senior Salesforce<br class="sm:hidden" /><span class="text-gradient">Administrator</span>
+            </h1>
+            <p class="mt-5 text-lg md:text-xl max-w-3xl mx-auto text-slate-400 leading-relaxed">
+                I build, automate, and optimize Salesforce ecosystems to drive business growth and user efficiency.<br />
+                Specializing in <span id="typing-effect" class="font-semibold text-gradient"></span><span class="typing-cursor"></span>
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-600/30 hover:scale-105">View My Work</a>
+                <a href="#contact" class="px-8 py-3.5 bg-slate-800/80 text-slate-200 font-bold rounded-xl hover:bg-slate-700 transition-all hover:scale-105 border border-slate-700">Get In Touch</a>
+            </div>
+        </section>
+
+        <!-- ===== WORK EXPERIENCE ===== -->
+        <section id="experience" class="py-20 section-anchor">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-14 text-center">Work Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-10">
+
+                <!-- Exp 1 -->
+                <div class="flex flex-col sm:flex-row gap-4 bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow">
+                    <div class="sm:w-1/4">
+                        <span class="text-indigo-400 font-semibold text-sm">2023 – Present</span>
+                    </div>
+                    <div class="sm:w-3/4">
+                        <h3 class="text-xl font-bold text-white">Senior Salesforce Administrator</h3>
+                        <p class="text-indigo-300 text-sm mb-2">CloudSphere Inc. · Remote</p>
+                        <ul class="text-slate-300 text-sm space-y-1 list-disc list-inside">
+                            <li>Led a team of 5 admins, managing 500+ users across Sales & Service Cloud.</li>
+                            <li>Designed and deployed 40+ Flows, reducing manual effort by 60%.</li>
+                            <li>Implemented a data governance framework, improving data quality by 35%.</li>
+                            <li>Spearheaded the integration with MuleSoft for real-time ERP sync.</li>
+                        </ul>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">Sales Cloud</span><span class="tech-tag">Flow</span><span class="tech-tag">Data Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="flex flex-col sm:flex-row gap-4 bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow">
+                    <div class="sm:w-1/4">
+                        <span class="text-indigo-400 font-semibold text-sm">2021 – 2023</span>
+                    </div>
+                    <div class="sm:w-3/4">
+                        <h3 class="text-xl font-bold text-white">Salesforce Administrator</h3>
+                        <p class="text-indigo-300 text-sm mb-2">Pangea Institute · Lagos, NG</p>
+                        <ul class="text-slate-300 text-sm space-y-1 list-disc list-inside">
+                            <li>Built a student success platform serving 2,000+ mentees and 50+ facilitators.</li>
+                            <li>Automated lead capture and onboarding, cutting processing time by 45%.</li>
+                            <li>Created real-time dashboards for executive visibility into enrollment metrics.</li>
+                            <li>Managed sandbox refreshes and change set deployments for 3 major releases.</li>
+                        </ul>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">Service Cloud</span><span class="tech-tag">Automation</span><span class="tech-tag">Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp 3 (placeholder for future) -->
+                <div class="flex flex-col sm:flex-row gap-4 bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow opacity-60 hover:opacity-100 transition">
+                    <div class="sm:w-1/4">
+                        <span class="text-slate-500 font-semibold text-sm">2019 – 2021</span>
+                    </div>
+                    <div class="sm:w-3/4">
+                        <h3 class="text-xl font-bold text-white">Junior Salesforce Admin</h3>
+                        <p class="text-indigo-300 text-sm mb-2">Vodi Group · Remote</p>
+                        <ul class="text-slate-300 text-sm space-y-1 list-disc list-inside">
+                            <li>Provided Level 2 support, resolving 95% of tickets within SLA.</li>
+                            <li>Built custom reports and dashboards for event planning and guest management.</li>
+                            <li>Assisted in the migration from Classic to Lightning Experience.</li>
+                        </ul>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">Lightning</span><span class="tech-tag">Reports</span><span class="tech-tag">Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE SKILLS & TOOLS ===== -->
+        <section id="skills" class="py-20 section-anchor">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-14 text-center">Core Skills &amp; Tools</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">⚡</span>
+                    <span class="text-sm font-medium text-slate-200">Flow / Process Builder</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">📊</span>
+                    <span class="text-sm font-medium text-slate-200">Tableau CRM / Reports</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">🔗</span>
+                    <span class="text-sm font-medium text-slate-200">MuleSoft / REST APIs</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">🔐</span>
+                    <span class="text-sm font-medium text-slate-200">Sharing &amp; Security</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">🧪</span>
+                    <span class="text-sm font-medium text-slate-200">Change Sets / DevOps</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">📋</span>
+                    <span class="text-sm font-medium text-slate-200">Data Loader / Data Cloud</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">📱</span>
+                    <span class="text-sm font-medium text-slate-200">Experience Cloud</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">📈</span>
+                    <span class="text-sm font-medium text-slate-200">Einstein Analytics</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">🧑‍🏫</span>
+                    <span class="text-sm font-medium text-slate-200">User Training &amp; Adoption</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">🛠️</span>
+                    <span class="text-sm font-medium text-slate-200">Apex / SOQL (basic)</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">🌐</span>
+                    <span class="text-sm font-medium text-slate-200">Lightning App Builder</span>
+                </div>
+                <div class="bg-slate-900/40 backdrop-blur-sm p-4 rounded-xl border border-slate-800 text-center card-glow">
+                    <span class="text-2xl block mb-1">📄</span>
+                    <span class="text-sm font-medium text-slate-200">DocuSign / Conga</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS (expanded) ===== -->
+        <section id="projects" class="py-20 section-anchor">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-14 text-center">Project Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 card-glow p-6 flex flex-col">
+                    <span class="text-xs font-semibold px-3 py-1 bg-green-500/20 text-green-400 rounded-full self-start">Completed</span>
+                    <h3 class="text-xl font-bold text-white mt-4">Pangea Institute · Student Success</h3>
+                    <p class="text-slate-400 text-sm mt-2 flex-1">Unified mentee/facilitator data, streamlined onboarding, nested mentorship product structure, real-time performance tracking.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag">Sales Cloud</span><span class="tech-tag">Flow</span><span class="tech-tag">Service Cloud</span><span class="tech-tag">Dashboards</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 card-glow p-6 flex flex-col">
+                    <span class="text-xs font-semibold px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full self-start">Completed</span>
+                    <h3 class="text-xl font-bold text-white mt-4">Player Onboarding &amp; Team Management</h3>
+                    <p class="text-slate-400 text-sm mt-2 flex-1">End-to-end player journey from scouting to post-retirement engagement for a premier football club.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag">Sales Cloud</span><span class="tech-tag">Data Integration</span><span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 card-glow p-6 flex flex-col">
+                    <span class="text-xs font-semibold px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full self-start">Completed</span>
+                    <h3 class="text-xl font-bold text-white mt-4">Event Planning App · Vodi Group</h3>
+                    <p class="text-slate-400 text-sm mt-2 flex-1">Unified planning, execution, and guest management into a scalable platform for wedding experiences.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag">Sales/Service Cloud</span><span class="tech-tag">Experience Cloud</span><span class="tech-tag">Marketing Cloud</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 (new) -->
+                <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 card-glow p-6 flex flex-col">
+                    <span class="text-xs font-semibold px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full self-start">In Progress</span>
+                    <h3 class="text-xl font-bold text-white mt-4">Nonprofit Success Pack (NPSP) Implementation</h3>
+                    <p class="text-slate-400 text-sm mt-2 flex-1">Customizing NPSP for a global NGO to manage donors, grants, and program impact tracking.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag">NPSP</span><span class="tech-tag">Donor Management</span><span class="tech-tag">Reports</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 (new) -->
+                <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 card-glow p-6 flex flex-col">
+                    <span class="text-xs font-semibold px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full self-start">Planned</span>
+                    <h3 class="text-xl font-bold text-white mt-4">HealthCloud Patient Engagement</h3>
+                    <p class="text-slate-400 text-sm mt-2 flex-1">Designing a patient portal with HealthCloud for appointment scheduling, care plans, and secure messaging.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag">HealthCloud</span><span class="tech-tag">Experience Cloud</span><span class="tech-tag">Security</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 (new) -->
+                <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 card-glow p-6 flex flex-col">
+                    <span class="text-xs font-semibold px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full self-start">Completed</span>
+                    <h3 class="text-xl font-bold text-white mt-4">Field Service Lightning (FSL) Rollout</h3>
+                    <p class="text-slate-400 text-sm mt-2 flex-1">Deployed FSL for a utilities company, optimizing dispatch, inventory, and work order management.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag">FSL</span><span class="tech-tag">Mobile</span><span class="tech-tag">Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
+        <section id="education" class="py-20 section-anchor">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-14 text-center">Education &amp; Certifications</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+
+                <div class="bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="sm:w-1/4 text-indigo-400 font-semibold text-sm">2020</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Salesforce Certified Administrator</h3>
+                        <p class="text-slate-400 text-sm">Salesforce · Credential ID: 12345678</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="sm:w-1/4 text-indigo-400 font-semibold text-sm">2021</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Platform App Builder</h3>
+                        <p class="text-slate-400 text-sm">Salesforce · Credential ID: 87654321</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="sm:w-1/4 text-indigo-400 font-semibold text-sm">2022</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Sales Cloud Consultant</h3>
+                        <p class="text-slate-400 text-sm">Salesforce · Credential ID: 11223344</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="sm:w-1/4 text-indigo-400 font-semibold text-sm">2018</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">B.Sc. Computer Science</h3>
+                        <p class="text-slate-400 text-sm">University of Lagos · First Class Honours</p>
+                    </div>
+                </div>
+
+                <!-- placeholder for future -->
+                <div class="bg-slate-900/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 card-glow opacity-50 hover:opacity-100 transition flex flex-col sm:flex-row gap-4 items-start">
+                    <div class="sm:w-1/4 text-slate-500 font-semibold text-sm">2024 (in progress)</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">JavaScript Developer I</h3>
+                        <p class="text-slate-400 text-sm">Salesforce · preparing for certification</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT (kept from original) ===== -->
+        <section id="about" class="py-20 section-anchor max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
+            <div class="bg-slate-900/30 backdrop-blur-sm p-8 rounded-2xl border border-slate-800">
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    With over 4 years as a Salesforce professional, I'm a strategic partner dedicated to transforming business operations.
+                    My approach combines deep technical expertise with user-centric design and scalable architecture. I thrive on untangling complex challenges
+                    and delivering elegant, automated solutions that empower users and drive measurable results.
+                    I believe the best Salesforce orgs feel intuitive, reliable, and indispensable to the teams that use them every day.
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+                    <span class="tech-tag">📘 Salesforce Certified Admin</span>
+                    <span class="tech-tag">📘 Platform App Builder</span>
+                    <span class="tech-tag">📘 Sales Cloud Consultant</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="py-20 section-anchor">
+            <div class="bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800 p-10 md:p-16 max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Build Something Great</h2>
+                <p class="mt-4 text-slate-400">Have a project in mind or just want to connect? Reach out anytime.</p>
+                <a href="mailto:onojajames005@gmail.com" class="mt-8 inline-block px-10 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition shadow-xl shadow-indigo-600/30 hover:scale-105">
+                    onojajames005@gmail.com
+                </a>
+                <div class="mt-10 flex justify-center space-x-8">
+                    <a href="https://www.linkedin.com/in/james-onoja-96bb1315a/" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" aria-label="LinkedIn">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.salesforce.com/trailblazer/jamesonoja" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" aria-label="Trailhead">
+                        <i data-feather="cloud-lightning" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition" aria-label="GitHub">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="text-center py-8 border-t border-slate-800/60 max-w-6xl mx-auto">
+        <p class="text-slate-500 text-sm">&copy; 2025 James Onoja · All rights reserved.</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-open-icon');
+            const closeIcon = document.getElementById('menu-close-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('hidden');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) toggleMenu();
+            }));
+
+            // Typing Effect
+            const typingEl = document.getElementById('typing-effect');
+            const words = ["complex automations.", "data analytics.", "secure integrations.", "user adoption.", "scalable solutions."];
+            let wordIdx = 0, charIdx = 0, isDeleting = false;
+
+            function type() {
+                const current = words[wordIdx];
+                let speed = 140;
+
+                if (isDeleting) {
+                    typingEl.textContent = current.substring(0, charIdx - 1);
+                    charIdx--;
+                    speed = 45;
+                    if (charIdx === 0) {
+                        isDeleting = false;
+                        wordIdx = (wordIdx + 1) % words.length;
+                        speed = 600;
+                    }
+                } else {
+                    typingEl.textContent = current.substring(0, charIdx + 1);
+                    charIdx++;
+                    if (charIdx === current.length) {
+                        isDeleting = true;
+                        speed = 2200;
+                    }
+                }
+                setTimeout(type, speed);
+            }
+            setTimeout(type, 1000);
+
+            // Feather Icons
+            feather.replace();
+        });
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The portfolio of James Onoja, a Senior Salesforce Administrator specializing in automation, analytics, and integration.">
