@@ -1,2 +1,7 @@
-# Onoja official Portfolio
-![image alt](https://github.com/onojaaofficial/Abu/blob/4fe8839236554148099c67f95545a36631f922ac/headshot.png)
+# James Onoja · Salesforce Administrator Portfolio
+
+![James Onoja](headshot.png)
+
+Source for my portfolio site: https://onojaaofficial.github.io/Abu/
+
+Certifications and superbadges: https://www.salesforce.com/trailblazer/jamesonoja
